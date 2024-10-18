@@ -1,0 +1,23 @@
+{
+  "timestamp": 1496400354326,
+  "account_id": "13",
+  "domain": "sample.myfreshworks.com",
+  "event": "onCpqDocumentDelete",
+  "region": "US",
+  "version": "2.0",
+  "productContext": {
+    "url": "https://sample.myfreshworks.com/crm",
+    "name": "freshworks_crm"
+  },
+  "data": {
+    "cpq_document" : {
+      "id":50000002175,
+      "cpq_document_product_association_ids":[50000002674]
+    },
+    "actor": {
+      "id": 0,
+      "name": "System",
+      "type": "system"
+    }
+  }
+}

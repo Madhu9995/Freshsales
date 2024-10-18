@@ -1,0 +1,127 @@
+{
+  "getUserDetails": {
+    "schema": {
+      "method": "GET",
+      "host": "api.zoom.us",
+      "path": "/v2/users/me",
+      "headers": {
+        "Authorization": "bearer <%= access_token %>",
+        "Content-Type": "application/json"
+      }
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "listWebinars": {
+    "schema": {
+      "method": "GET",
+      "host": "api.zoom.us",
+      "path": "/v2/users/<%= context.userId %>/webinars",
+      "headers": {
+        "Authorization": "bearer <%= access_token %>",
+        "Content-Type": "application/json"
+      }
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "listWebinarParticipants": {
+    "schema": {
+      "method": "GET",
+      "host": "api.zoom.us",
+      "path": "/v2/past_webinars/<%= context.webinarId %>/participants",
+      "headers": {
+        "Authorization": "bearer <%= access_token %>",
+        "Content-Type": "application/json"
+      }
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "listWebinarRegistrants": {
+    "schema": {
+      "method": "GET",
+      "host": "api.zoom.us",
+      "path": "/v2/webinars/<%= context.webinarId %>/registrants",
+      "headers": {
+        "Authorization": "bearer <%= access_token %>",
+        "Content-Type": "application/json"
+      }
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "EventSubscription": {
+    "schema": {
+      "method": "POST",
+      "host": "api.zoom.us",
+      "path": "/v2/marketplace/app/event_subscription",
+      "headers": {
+        "Authorization": "bearer <%= access_token %>",
+        "Content-Type": "application/json"
+      }
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "contact_check": {
+    "schema": {
+      "method": "GET",
+      "host": "jetzerp-764021646700305537.myfreshworks.com",
+      "path": "/crm/sales/api/search?q=<%= context.email %>&include=contact",
+      "headers": {
+        "Authorization": "Token token=SjTe4HRFUEQVFqR-xqY7Vg",  
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "view_contact": {
+    "schema": {
+      "method": "GET",
+      "host": "jetzerp-764021646700305537.myfreshworks.com",
+      "path": "/crm/sales/api/contacts/<%= context.contactId %>",
+      "headers": {
+        "Authorization": "Token token=SjTe4HRFUEQVFqR-xqY7Vg",  
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "create_contact": {
+    "schema": {
+      "method": "POST",
+      "host": "jetzerp-764021646700305537.myfreshworks.com",
+      "path": "/crm/sales/api/contacts",
+      "headers": {
+        "Authorization": "Token token=SjTe4HRFUEQVFqR-xqY7Vg",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "update_contact": {
+    "schema": {
+      "method": "PUT",
+      "host": "jetzerp-764021646700305537.myfreshworks.com",
+      "path": "/crm/sales/api/contacts/<%= context.id %>",
+      "headers": {
+        "Authorization": "Token token=SjTe4HRFUEQVFqR-xqY7Vg",
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  "create_custom_field": {
+    "schema": {
+      "method": "POST",
+      "host": "jetzerp-764021646700305537.myfreshworks.com",
+      "path": "/crm/sales/settings/contacts/forms/1/fields",
+      "headers": {
+        "Authorization": "Token token=SjTe4HRFUEQVFqR-xqY7Vg",
+        "Content-Type": "application/json"
+      }
+    }
+  }
+}
