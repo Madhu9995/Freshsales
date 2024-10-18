@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="clipboard=(self)">
+  <script src="{{{appclient}}}"></script>
+  <script async type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+  <script async nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <title>Webinar App</title>
+</head>
+
+<body>
+  <article>
+    <header class="profile-section">
+      <fw-avatar initials="UK" id="avatar" color="red"></fw-avatar>
+    </header>
+
+    <section class="webinar-button">
+      <h1>Webinar Lists</h1>
+    </section>
+
+    <section>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search..."
+          aria-label="Search"
+        />
+      </div>
+      <table id="webinarTable">
+        <thead>
+          <tr>
+            <th>Webinar Name</th>
+            <th>Webinar ID</th>
+            <th>Scheduled Date & Time</th>
+            <th>Last Sync</th>
+            <th>Sync Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically inserted here -->
+        </tbody>
+      </table>
+      
+      <div class="pagination-container">
+        <div class="items-per-page">
+          <label for="itemsPerPage">Items per page:</label>
+          <select id="itemsPerPage">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <div class="pagination-controls">
+          <button id="prevPage" disabled>&laquo; Previous</button>
+          <span id="pageIndicator">Page 1 of 1</span>
+          <button id="nextPage" disabled>Next &raquo;</button>
+        </div>
+      </div>
+    </section>
+    
+  </article>
+
+  <!-- Sign-out Confirmation Modal -->
+  <fw-modal id="signout-modal" title-text="Switch Account" submit-text="Confirm">
+    <p>Are you sure you want to switch accounts?</br>Note: You need to click reauthorize to switch accounts.</p>
+  </fw-modal>
+
+  <!-- Webinar Modal -->
+  <fw-modal id="webinar-modal" title-text="Webinar Details" submit-text="Close" class="large-modal">
+    <div class="tab-content">
+      <h2>Registrants</h2>
+      <table id="registrantsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Registered Date & Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Registrants will be populated here -->
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-content">
+      <h2>Participants</h2>
+      <table id="participantsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Joined At</th>
+            <th>Left At</th>
+            <th>View time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Participants will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </fw-modal>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

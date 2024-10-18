@@ -1,0 +1,51 @@
+{
+  "platform-version": "2.3",
+  "product": {
+    "freshworks_crm": {
+      "location": {
+        "contact_entity_menu": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
+      },
+      "events": {
+        "onAppInstall": {
+          "handler": "onAppInstallHandler"
+        },
+        "onExternalEvent": {
+          "handler": "onInvokeCheckHandler"
+        }
+      },
+      "functions": {
+        "initialEventSubscription":{"timeout": 10},
+        "customFieldCreation": {"timeout": 10},
+        "updateCustomFieldValues":{"timeout": 10},
+        "addContactInFreshworks":{"timeout": 10}
+      },
+      "requests": {
+        "getUserDetails": {},
+        "listWebinars": {},
+        "listWebinarParticipants": {},
+        "listWebinarRegistrants": {},
+        "EventSubscription":{},
+        "contact_check": {},
+        "view_contact":{},
+        "create_contact": {},
+        "update_contact": {},
+        "create_custom_field": {}
+      },
+      "entity": {
+        "scopes": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  },
+  "engines": {
+    "node": "18.20.4",
+    "fdk": "9.2.0"
+  }
+}

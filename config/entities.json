@@ -1,0 +1,28 @@
+{
+  "webinarEssentials": {
+    "fields": [
+      {
+        "name": "accountId",
+        "label": "Account ID",
+        "type": "text",
+        "filterable": true
+      },
+      {
+        "name": "webinarId",
+        "label": "Webinar ID",
+        "type": "text",
+        "filterable": true
+      },
+      {
+        "name": "webinarName",
+        "label": "Webinar Name",
+        "type": "text"
+      },
+      {
+        "name": "lastSyncTime",
+        "label": "Last Sync Time",
+        "type": "text"
+      }
+    ]
+  }
+}

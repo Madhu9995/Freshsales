@@ -1,0 +1,166 @@
+/* Base styles */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main layout */
+article {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Profile section */
+.profile-section {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Webinar button */
+.webinar-button {
+  margin: 2rem 0 20px;
+}
+
+.webinar-button h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Table styling */
+#webinarTable {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-collapse: collapse;
+}
+
+#webinarTable th, #webinarTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#webinarTable th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+#webinarTable td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#webinarTable td a:hover {
+  text-decoration: underline;
+}
+
+#webinarTable tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Pagination styling */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.items-per-page {
+  font-size: 0.9rem;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.pagination-controls button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-controls button[disabled] {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination-controls #pageIndicator {
+  font-size: 0.9rem;
+}
+
+/* Modal styles */
+.large-modal {
+  --fw-modal-width: 80vw;
+  --fw-modal-height: 80vh;
+}
+
+.tab-content {
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Registrants and participants tables */
+#registrantsTable, #participantsTable {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+#registrantsTable th, #participantsTable th,
+#registrantsTable td, #participantsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#registrantsTable th, #participantsTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .large-modal {
+    --fw-modal-width: 90vw;
+    --fw-modal-height: 90vh;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns to the right */
+  margin-bottom: 10px; /* Adds some space below */
+}
+
+#searchInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px; /* Adjust width as needed */
+}
