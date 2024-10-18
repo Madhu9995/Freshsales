@@ -1,6 +1,6 @@
 {
-  "client_id": "Tu5Qr33gThSUTQVmdzk9g",
-  "client_secret": "DVHhwLwnCth2FtvB7zh6YO3dJRQO7Dye",
+  "client_id": "****************",
+  "client_secret": "******************",
   "authorize_url": "https://zoom.us/oauth/authorize",
   "token_url": "https://zoom.us/oauth/token",
   "token_type": "agent"
